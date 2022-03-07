@@ -1,0 +1,18 @@
+.Story {
+	width: 80%;
+	margin: 0 auto;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(83, 228, 17);
+    background-color: black;
+}
+
+.button1 {
+    background-color: #c24f59; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
