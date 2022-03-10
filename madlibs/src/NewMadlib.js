@@ -1,26 +1,25 @@
 
-import React, { useState } from 'react';
-import { v4 as uuid } from 'uuid';
+import React, { useState } from 'react'
 import MadlibForm from './MadlibForm';
 import Story from './Story';
 
 
 function NewMadlib() {
 
-	const INITIAL_STATE = [];
+	const INITIAL_STATE = {};
 	const [story, setStory] = useState(INITIAL_STATE);
 	const [showStory, setShowStory] = useState(false);
 
 	const createStory = (newStory) => {
-		setStory((madlibs) => [...madlibs, { ...newStory, id: uuid() }]);
-	};
+                setStory({ ...newStory });
+              };
 	return (
 
     <div className='NewMadlib'>
 			<h1>MADLIBS </h1>
 		<div>	{ 
                 showStory ?  
-                (<Story setShowStory={setShowStory} setStory={setStory} story={story[0]}/>) 
+                (<Story setShowStory={setShowStory} setStory={setStory} story={story}/>) 
                 : (<MadlibForm setShowStory={setShowStory} createStory={createStory} />)
             }
             </div>
