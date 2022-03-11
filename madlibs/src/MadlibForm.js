@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import './MadlibForm.css'
 
+const INITIAL_STATE = { noun: '', noun2: '', adjective: '', color: '' };
+
 function MadlibForm({ setShowStory, createStory }) {
 
-	const INITIAL_STATE = { noun: '', noun2: '', adjective: '', color: '' };
 	const [formData, setFormData] = useState(INITIAL_STATE);
-
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData((formData) => ({
@@ -17,7 +17,7 @@ function MadlibForm({ setShowStory, createStory }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		createStory({ ...formData });
-    setShowStory(true);
+                setShowStory(true);
 		setFormData(INITIAL_STATE);
 		
 	};
