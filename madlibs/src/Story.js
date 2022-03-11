@@ -5,7 +5,7 @@ function Story({ setShowStory, setStory, story }) {
 
 	const restart = () => {
 		setShowStory(false);
-		setStory([]);
+		setStory();
 	};
 
 	return (
